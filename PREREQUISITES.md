@@ -44,4 +44,4 @@ wsl --install
 
 ---
 
-**Next Step:** Once your PC has restarted, proceed to [INSTALLATION.md](https://www.google.com/search?q=INSTALLATION.md).
+**Next Step:** Once your PC has restarted, proceed to [INSTALLATION.md](INSTALLATION.md).
