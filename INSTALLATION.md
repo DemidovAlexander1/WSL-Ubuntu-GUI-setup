@@ -118,6 +118,13 @@ To make launching the GUI easy, we will create shortcuts that match the filename
 You are all set! Here is how to manage your new Ubuntu Desktop:
 
 * **To Start the GUI:** Type `StartUbuntuGUI` and press Enter. Windows Remote Desktop will open automatically.
+
+> [!IMPORTANT]
+> **At the Login Screen:**
+> 1. Keep the session set to **Xorg** (the top/default option).
+> 2. Enter the **Ubuntu Username** and **Password** you created in Step 3.
+> 3. Click **OK** to enter your new desktop.
+
 * **To Stop the GUI:** Type `StopUbuntuGUI` to safely close the session and free up RAM.
 
 **Congratulations! You now have a fully functional WSL2 Ubuntu GUI.**
