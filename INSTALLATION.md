@@ -136,9 +136,7 @@ Now that everything is set up, you don't need to look for a specific app. You ca
 
 ### Final Check of the "Success" Flow
 
-Your user's daily routine will now look like this:
-
-1. Open **Windows Terminal**.
+1. Open **Ubuntu Terminal**.
 2. Type `StartUbuntuGUI` (The alias you created!).
 3. Work in the GUI.
 4. Type `StopUbuntuGUI` when finished to save RAM.
