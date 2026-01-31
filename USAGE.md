@@ -35,6 +35,17 @@ StopUbuntuGUI
 
 ---
 
+### Once the Remote Desktop window opens.
+
+1. **Session:** Ensure the dropdown menu is set to **Xorg** (this should be the top/default option).
+2. **Credentials:** Enter the **Ubuntu Username** and **Password** you created during the installation.
+3. **Click OK:** The Ubuntu Desktop will now initialize.
+
+> [!TIP]
+> If you see a second password prompt inside the desktop asking to "Create a color profile," you can usually just click **Cancel** or **Enter**—this is a standard Linux security check that doesn't affect your work.
+
+---
+
 ### 🛠️ Troubleshooting the "Blank Screen"
 
 If you open the GUI and see only a **black or blue screen** with no desktop icons, don't worry—this is a common WSL sync issue that I also encountered frequently during the development of this setup.
