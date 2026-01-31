@@ -34,10 +34,22 @@ This command ensures the latest WSL kernel and management tools are installed on
 wsl --install
 
 ```
+---
+
+### 5. Configure System Resources (RAM Management)
+
+To prevent WSL from using too much of your computer's memory, we will create a configuration file that limits WSL to half of your total RAM. 
+
+Run this single command in **PowerShell**:
+
+```powershell
+$mem = [math]::Round((Get-CimInstance Win32_OperatingSystem).TotalVisibleMemorySize / 2 / 1024); if (!(Test-Path "$HOME\.wslconfig")) { New-Item -Path "$HOME\.wslconfig" -ItemType File }; Set-Content -Path "$HOME\.wslconfig" -Value "[wsl]`nmemory=${mem}MB"
+
+```
 
 ---
 
-### 5. Restart Your PC
+### 6. Restart Your PC
 
 > [!IMPORTANT]
 > **You must restart your computer now.** The features enabled in the steps above will not be active until the system reboots.
