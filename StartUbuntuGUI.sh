@@ -6,7 +6,7 @@ get_xrdp_status() {
 	systemctl is-active --quiet xrdp
 }
 
-sudo pkill -u ubuntu
+sudo pkill -u $USER
 
 if ! get_xrdp_status; then
 
