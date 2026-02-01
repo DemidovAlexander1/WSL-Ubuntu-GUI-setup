@@ -39,12 +39,12 @@ Once Ubuntu starts, it will ask you to create a **Username** and **Password**.
 Run this first to block Snap and prioritize Apt.
 
 ```bash
-  # Create a policy file to prioritize apt
-  sudo tee /etc/apt/preferences.d/nosnap.pref << 'EOF'
-  Package: snapd
-  Pin: release a=*
-  Pin-Priority: -10
-  EOF
+# Create a policy file to prioritize apt
+sudo tee /etc/apt/preferences.d/nosnap.pref << 'EOF'
+Package: snapd
+Pin: release a=*
+Pin-Priority: -10
+EOF
 ```
 
 ---
@@ -54,18 +54,18 @@ Run this first to block Snap and prioritize Apt.
 Now that the system is optimized, we will install the actual Graphical User Interface (GUI). This process may take **5-10 minutes** depending on your internet speed.
 
 ```bash
-  # Update the system
-  sudo apt update && sudo apt upgrade -y
+# Update the system
+sudo apt update && sudo apt upgrade -y
 ```
 
 ```bash
-  # Install the Native Ubuntu Desktop Environment
-  sudo apt install ubuntu-desktop-minimal xrdp -y
+# Install the Native Ubuntu Desktop Environment
+sudo apt install ubuntu-desktop-minimal xrdp -y
 ```
 
 ```bash
-  # Configure the GUI to use GNOME
-  echo "gnome-session" > ~/.xsession
+# Configure the GUI to use GNOME
+echo "gnome-session" > ~/.xsession
 ```
 
 ---
@@ -75,12 +75,12 @@ Now that the system is optimized, we will install the actual Graphical User Inte
 We will now download the scripts that handle the "One-Click" startup and cleanup.
 
 ```bash
-  # Download the Start and Stop scripts
-  curl -L https://raw.githubusercontent.com/Sai-Sampath-Vegi/WSL-Ubuntu-GUI-setup/main/StartUbuntuGUI.sh > ~/StartUbuntuGUI.sh
-  curl -L https://raw.githubusercontent.com/Sai-Sampath-Vegi/WSL-Ubuntu-GUI-setup/main/StopUbuntuGUI.sh > ~/StopUbuntuGUI.sh
-  
-  # Grant execution permissions
-  chmod +x ~/StartUbuntuGUI.sh ~/StopUbuntuGUI.sh
+# Download the Start and Stop scripts
+curl -L https://raw.githubusercontent.com/Sai-Sampath-Vegi/WSL-Ubuntu-GUI-setup/main/StartUbuntuGUI.sh > ~/StartUbuntuGUI.sh
+curl -L https://raw.githubusercontent.com/Sai-Sampath-Vegi/WSL-Ubuntu-GUI-setup/main/StopUbuntuGUI.sh > ~/StopUbuntuGUI.sh
+
+# Grant execution permissions
+chmod +x ~/StartUbuntuGUI.sh ~/StopUbuntuGUI.sh
 ```
 
 ---
@@ -90,9 +90,9 @@ We will now download the scripts that handle the "One-Click" startup and cleanup
 To make launching the GUI easy, we will create shortcuts that match the filenames.
 
 ```bash
-  echo "alias StartUbuntuGUI='source ~/StartUbuntuGUI.sh'" >> ~/.bashrc
-  echo "alias StopUbuntuGUI='source ~/StopUbuntuGUI.sh'" >> ~/.bashrc
-  source ~/.bashrc
+echo "alias StartUbuntuGUI='source ~/StartUbuntuGUI.sh'" >> ~/.bashrc
+echo "alias StopUbuntuGUI='source ~/StopUbuntuGUI.sh'" >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ---
@@ -143,7 +143,7 @@ If you open the GUI and see only a **black or blue screen** with no desktop icon
 1. **The Quick Reset:** Close the Remote Desktop window, go back to your terminal, and run:
 
 ```bash
-  StopUbuntuGUI && StartUbuntuGUI
+StopUbuntuGUI && StartUbuntuGUI
 ```
 
 *This kills any "zombie" processes and starts a fresh session.*
@@ -151,8 +151,8 @@ If you open the GUI and see only a **black or blue screen** with no desktop icon
 2. **The "Kill All" Method:** If the script doesn't fix it, manually clear the XRDP cache by running:
 
 ```bash
-  sudo pkill -u $USER xrdp
-  sudo pkill -u $USER Xvnc
+sudo pkill -u $USER xrdp
+sudo pkill -u $USER Xvnc
 ```
 
 Then run `StartUbuntuGUI` again.
