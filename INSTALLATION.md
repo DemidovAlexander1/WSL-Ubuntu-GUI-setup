@@ -213,4 +213,6 @@ Your Ubuntu GUI environment is now fully configured and optimized. You have succ
 ### 📖 What's Next?
 To learn the daily commands for starting/stopping your desktop and how to fix the "Blank Screen" bug if it appears, proceed to the final guide.
 
+---
+
 👉 **[Proceed to USAGE.md (Quick Start & Reference)](USAGE.md)**
