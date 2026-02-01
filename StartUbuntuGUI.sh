@@ -1,12 +1,15 @@
+USER_NAME=$(whoami)
+XRDP_PORT=$(grep -Po '(?<=^port=)\d+' /etc/xrdp/xrdp.ini)
+
 launch_rdp() {
-	/mnt/c/Windows/System32/mstsc.exe /v:localhost:3390
+	/mnt/c/Windows/System32/mstsc.exe /v:localhost:$XRDP_PORT
 }
 
 get_xrdp_status() {
 	systemctl is-active --quiet xrdp
 }
 
-sudo pkill -u $USER
+sudo pkill -u $USER_NAME
 
 if ! get_xrdp_status; then
 
