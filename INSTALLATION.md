@@ -70,7 +70,24 @@ echo "gnome-session" > ~/.xsession
 
 ---
 
-### 6. Install Automation Scripts
+### 6. Critical System Initialization (Fixes RDP Crash)
+
+This step is essential to prevent the Remote Desktop from crashing immediately after login. It ensures your Ubuntu instance has a unique identity and the communication bus is ready.
+
+Run these commands in your Ubuntu terminal:
+
+```bash
+# Generate a unique ID for your system
+sudo systemd-machine-id-setup
+sudo dbus-uuidgen --ensure
+
+# Set the default session to GNOME
+echo "gnome-session" > ~/.xsession
+```
+
+---
+
+### 7. Install Automation Scripts
 
 We will now download the scripts that handle the "One-Click" startup and cleanup.
 
@@ -85,7 +102,7 @@ chmod +x ~/StartUbuntuGUI.sh ~/StopUbuntuGUI.sh
 
 ---
 
-### 7. Create Permanent Shortcuts (Aliases)
+### 8. Create Permanent Shortcuts (Aliases)
 
 To make launching the GUI easy, we will create shortcuts that match the filenames.
 
@@ -97,7 +114,7 @@ source ~/.bashrc
 
 ---
 
-### 8. Launch & Test your GUI
+### 9. Launch & Test your GUI
 
 You are all set! Here is how to manage your new Ubuntu Desktop:
 
@@ -115,7 +132,7 @@ You are all set! Here is how to manage your new Ubuntu Desktop:
 
 ---
 
-### 9. Launching Ubuntu Like a Pro
+### 10. Launching Ubuntu Like a Pro
 
 Now that everything is set up, you don't need to look for a specific app. You can open your Ubuntu terminal from anywhere in Windows.
 
@@ -160,6 +177,32 @@ Then run `StartUbuntuGUI` again.
 3. **The Ultimate Fix:**
 > [!IMPORTANT]
 > **Note from the Creator:** I personally faced this issue many times. If the steps above don't work, simply **restart your Windows machine**. This clears the Virtual Machine Platform's memory and fixes the blank screen 100% of the time.
+
+---
+
+### 🛠️ GUI Troubleshooting & Fixes
+
+If your Ubuntu Desktop fails to launch correctly, use the following solutions:
+
+1. **Instant Remote Desktop Crash**
+ * **Symptom:** The Remote Desktop window opens, you enter your credentials, click "OK," and the app immediately closes.
+ * **Cause:** This is usually due to a missing System Machine ID or a D-Bus communication failure.
+ * **The Fix:** Run these commands in your Ubuntu terminal:
+
+```bash
+sudo systemd-machine-id-setup
+sudo dbus-uuidgen --ensure
+```
+
+2. **White Screen / "Something has gone wrong"**
+ * **Symptom:** You log in successfully, but instead of the desktop, you see a white screen with a "sad computer" icon.
+ * **Cause:** The GNOME session is failing to initialize or is trying to launch an incompatible session type.
+ * **The Fix:** Force the session to use GNOME by running:
+
+```bash
+echo "gnome-session" > ~/.xsession
+sudo service xrdp restart
+```
 
 ---
 
