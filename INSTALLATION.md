@@ -12,7 +12,7 @@ Now that Windows is prepared, we will install Ubuntu and set up the Graphical In
 Run this command in your open PowerShell window to download the latest Ubuntu distribution:
 
 ```powershell
-  wsl --install -d Ubuntu
+wsl --install -d Ubuntu
 ```
 
 ### 2. Launch Ubuntu (Inside this Terminal)
@@ -20,7 +20,7 @@ Run this command in your open PowerShell window to download the latest Ubuntu di
 Run this command to enter the Ubuntu environment.
 
 ```powershell
-  ubuntu
+ubuntu
 ```
 
 ### 3. Setup User Credentials
