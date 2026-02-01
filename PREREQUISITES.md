@@ -11,9 +11,7 @@ Right-click your **Start Menu**, select **Terminal (Admin)** or **PowerShell (Ad
 Copy and paste this command to enable the core WSL feature:
 
 ```powershell
-
-  dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
 ### 3. Enable Virtual Machine Platform
@@ -21,9 +19,7 @@ Copy and paste this command to enable the core WSL feature:
 This feature is required for WSL 2 to support a Graphical Desktop environment and hardware virtualization.
 
 ```powershell
-
-  dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 ---
@@ -33,9 +29,7 @@ This feature is required for WSL 2 to support a Graphical Desktop environment an
 This command ensures the latest WSL kernel and management tools are installed on your system.
 
 ```powershell
-
-  wsl --install
-
+wsl --install
 ```
 ---
 
@@ -46,9 +40,7 @@ To prevent WSL from using too much of your computer's memory, we will create a c
 Run this single command in **PowerShell**:
 
 ```powershell
-
-  $mem = [math]::Round((Get-CimInstance Win32_OperatingSystem).TotalVisibleMemorySize / 2 / 1024); if (!(Test-Path "$HOME\.wslconfig")) { New-Item -Path "$HOME\.wslconfig" -ItemType File }; Set-Content -Path "$HOME\.wslconfig" -Value "[wsl]`nmemory=${mem}MB"
-
+$mem = [math]::Round((Get-CimInstance Win32_OperatingSystem).TotalVisibleMemorySize / 2 / 1024); if (!(Test-Path "$HOME\.wslconfig")) { New-Item -Path "$HOME\.wslconfig" -ItemType File }; Set-Content -Path "$HOME\.wslconfig" -Value "[wsl]`nmemory=${mem}MB"
 ```
 
 ---
